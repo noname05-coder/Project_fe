@@ -1,0 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;
+    --foreground: 222 47% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 12%;
+
+    --primary: 221 70% 14%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 222 47% 12%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 56%;
+
+    --accent: 220 14% 94%;
+    --accent-foreground: 222 47% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 70% 50%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .waveform {
+    @apply flex items-end h-6 gap-0.5;
+  }
+  
+  .waveform-bar {
+    @apply w-1 bg-primary rounded-full animate-pulse-wave;
+  }
+  
+  .gradient-heading {
+    @apply bg-gradient-to-r from-navy-700 to-navy-500 bg-clip-text text-transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .btn-primary {
+    @apply bg-navy-600 hover:bg-navy-700 text-white rounded-lg px-6 py-3 font-medium transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-slate-100 hover:bg-slate-200 text-navy-800 rounded-lg px-6 py-3 font-medium transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border border-slate-300 hover:border-slate-400 bg-transparent rounded-lg px-6 py-3 font-medium transition-colors;
+  }
+}
