@@ -61,6 +61,32 @@
     @apply bg-gradient-to-r from-navy-700 to-navy-500 bg-clip-text text-transparent;
   }
   
+  /* Custom glassmorphism effects */
+  .glassmorphism {
+    @apply backdrop-blur-md bg-white/30 border border-white/20;
+  }
+  
+  .purple-glassmorphism {
+    @apply backdrop-blur-md bg-gradient-to-r from-purple-800/40 via-purple-900/40 to-purple-800/40 
+      border border-purple-500/20;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+  }
+  
+  /* Animated gradient background */
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
@@ -75,5 +101,18 @@
   
   .btn-outline {
     @apply border border-slate-300 hover:border-slate-400 bg-transparent rounded-lg px-6 py-3 font-medium transition-colors;
+  }
+  
+  /* New styles for welcome section */
+  .feature-card {
+    @apply rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .stats-container {
+    @apply bg-white rounded-xl shadow-sm p-6 transition-all duration-300 hover:shadow-md;
+  }
+  
+  .stats-icon {
+    @apply p-3 rounded-lg mr-4 flex items-center justify-center;
   }
 }
